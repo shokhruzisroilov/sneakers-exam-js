@@ -105,7 +105,7 @@ body{
 			position: absolute;
 			right: 130px;
 			padding: 24px;
-			// display: none;	
+			display: none;	
 			.h3{
 				font-style: normal;
 				font-weight: 700;
@@ -118,6 +118,10 @@ body{
 				height: 1px;
 				background-color: #E4E9F2;
 				margin-top: 27px;
+			}
+			.h4{
+				text-align: center;
+				margin-top: 50px;
 			}
 			.product{
 				margin-top: 24px;
@@ -138,12 +142,27 @@ body{
 					.span{
 						display: flex;
 						column-gap:6px;
+						p{
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 26px;
+							color: #69707D;
+						}
+						b{
+							font-weight: 700;
+							font-size: 16px;
+							line-height: 26px;
+							color: #1D2026;
+						}
 					}
 				}
 				.delete-icon{
 					width: 14px;
 					height: 16px;
 					margin-left: 19px;
+				}
+				.delete-icon:hover{
+					transform: scale(1.2)
 				}
 			}
 			button{
@@ -160,6 +179,12 @@ body{
 					color: #FFFFFF;
 				}
 			}
+			button:hover{
+				opacity: 0.9;
+			}
+		}
+		.toggle{
+			display: block;
 		}
 	}
 	main{
@@ -172,10 +197,34 @@ body{
 			margin-top: 90px;
 			margin-bottom: 130px;
 			.main__img{
-				.smile__imges{
-					display: flex;
-					column-gap:30px;
-					margin-top: 32px;
+				.big__img{
+					.tab{
+						width: 445px;
+						height: 445px;
+						border-radius: 15px;
+						display: none;
+					}
+					.tab.tab_active{
+						display: block;
+					}
+					.smile__imges{
+						display: flex;
+						column-gap:30px;
+						margin-top: 32px;
+						.tab-link{
+							width: 88px;
+							height: 88px;
+							border-radius: 10px;
+							cursor: pointer;
+						}
+						.tab-link:hover{
+							opacity: 0.3;
+						}
+						.tab-link.tab-link_active{
+							opacity: 0.4;
+							border: 2px solid #FF7E1B;
+						}
+					}
 				}
 			}
 			.main__text{
@@ -246,7 +295,7 @@ body{
 					.time{
 						display: flex;
 						column-gap:9px;
-						.times{
+						div{
 							width: 35px;
 							height: 27px;
 							display: flex;
@@ -271,8 +320,8 @@ body{
 						background: #F6F8FD;
 						border-radius: 10px;
 						display: flex;
-						column-gap:45px;
-						justify-content: center;
+						// column-gap:45px;
+						justify-content: space-between;
 						align-items:center;
 						h6{
 							font-weight: 700;
@@ -280,6 +329,20 @@ body{
 							line-height: 20px;
 							text-align: center;
 							color: #1D2026;
+						}
+						#minus-count{
+							width:50px;
+							height: inherit;
+							display: flex;
+							align-items:center;
+							justify-content: center;
+						}
+						#plus-count{
+							width: 50px;
+							height: inherit;
+							display: flex;
+							align-items:center;
+							justify-content: center;
 						}
 					}
 					.cart{
@@ -298,6 +361,9 @@ body{
 							line-height: 20px;
 							color: #FFFFFF;
 						}
+					}
+					.cart:hover{
+						opacity: 0.9;
 					}
 				}
 			}
