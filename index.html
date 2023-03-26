@@ -7,12 +7,18 @@
     <title>Sneakers</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
 </head> 
 <body>
     <!-- Header -->
     <header>
         <div class="header__contend container">
             <div class="header__left">
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <div class="header__logo">
                     <img src="img/header-logo.png" alt="header logo">
                 </div>
@@ -56,21 +62,27 @@
                         <img class='tab-link' src="img/snek-img4.png" alt="snek-img4">
                     </div>
                 </div>
-                <div class="slider__modal">
+                <div class="slider__modal hidden">
                     <div class="close-btn">
                         <img src="img/close-btn.svg" alt="close btn">
                     </div>
                     <div class="slider">
-                        <div class='slide-prev'>&#8249;</div>
-                        <div class="slider-img">
+                        <div class='slide-prev'><img src="img/preve-icon.svg" alt="icon"></div>
+                        <div class="slider__img">
                             <div class="slider-inner">
-                                <div class="slide"><img class='tab' src="img/Sneaker-big-img1.png" alt="img"></div>
-                                <div class="slide"><img class='tab' src="img/Sneaker-big-img2.png" alt="img"></div>
-                                <div class="slide"><img class='tab' src="img/Sneaker-big-img3.png" alt="img"></div>
-                                <div class="slide"><img class='tab' src="img/Sneaker-big-img4.png" alt="img"></div>
+                                <div class="slide"><img src="img/Sneaker-big-img1.png" alt="img"></div>
+                                <div class="slide"><img src="img/Sneaker-big-img2.png" alt="img"></div>
+                                <div class="slide"><img src="img/Sneaker-big-img3.png" alt="img"></div>
+                                <div class="slide"><img src="img/Sneaker-big-img4.png" alt="img"></div>
                             </div>
                         </div>
-                        <div class='slide-next'>&#8250;</div>
+                        <div class='slide-next'><img src="img/next-icon.svg" alt="icon"></div>
+                    </div>
+                    <div id='slide-parent' class='modal-img'>
+                        <img class='slide-link' src="img/snek-img1.png" alt="snek-img1">
+                        <img class='slide-link' src="img/snek-img2.png" alt="snek-img2">
+                        <img class='slide-link' src="img/snek-img3.png" alt="snek-img3">
+                        <img class='slide-link' src="img/snek-img4.png" alt="snek-img4">
                     </div>
                 </div>
             </div>
@@ -119,7 +131,7 @@
             </div>
         </div>
     </main>
-    <div class="overly"></div>
+    <div class="overly hidden"></div>
     <!-- JS -->
     <script src="js/sneaker.js"></script>
     <script src="js/shopping-cart.js"></script>
