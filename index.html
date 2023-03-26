@@ -7,7 +7,7 @@
     <title>Sneakers</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
-</head>
+</head> 
 <body>
     <!-- Header -->
     <header>
@@ -56,6 +56,23 @@
                         <img class='tab-link' src="img/snek-img4.png" alt="snek-img4">
                     </div>
                 </div>
+                <div class="slider__modal">
+                    <div class="close-btn">
+                        <img src="img/close-btn.svg" alt="close btn">
+                    </div>
+                    <div class="slider">
+                        <div class='slide-prev'>&#8249;</div>
+                        <div class="slider-img">
+                            <div class="slider-inner">
+                                <div class="slide"><img class='tab' src="img/Sneaker-big-img1.png" alt="img"></div>
+                                <div class="slide"><img class='tab' src="img/Sneaker-big-img2.png" alt="img"></div>
+                                <div class="slide"><img class='tab' src="img/Sneaker-big-img3.png" alt="img"></div>
+                                <div class="slide"><img class='tab' src="img/Sneaker-big-img4.png" alt="img"></div>
+                            </div>
+                        </div>
+                        <div class='slide-next'>&#8250;</div>
+                    </div>
+                </div>
             </div>
             <div class="main__text">
                 <h2>Sneaker Company</h2>
@@ -69,11 +86,23 @@
                         </span>
                         <h3 id='cost'>$000.00</h3>
                     </div>
-                    <div id='timer' class="time">
-                        <div class='days'>00</div>
-                        <div class='hours'>00</div>
-                        <div class='minutes'>00</div>
-                        <div class='seconds'>00</div>
+                    <div class="time" id='timer'>
+                        <div class='days times'>05</div>
+                        <span>
+                            <div></div>
+                            <div></div>
+                        </span>
+                        <div class='hours times'>15</div>
+                        <span>
+                            <div></div>
+                            <div></div>
+                        </span>
+                        <div class='minutes times'>32</div>
+                        <span>
+                            <div></div>
+                            <div></div>
+                        </span>
+                        <div class='seconds times'>17</div>
                     </div>
                 </div>
                 <div class="cart__count">
@@ -90,9 +119,11 @@
             </div>
         </div>
     </main>
+    <div class="overly"></div>
     <!-- JS -->
     <script src="js/sneaker.js"></script>
     <script src="js/shopping-cart.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/modal-slider.js"></script>
 </body>
 </html>

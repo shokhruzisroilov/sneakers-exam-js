@@ -226,6 +226,20 @@ body{
 						}
 					}
 				}
+				.slider__modal{
+				position: absolute;
+				width: 550px;
+				height: max-content;
+				z-index: 9999;
+				margin-top: 90px;
+				.close-btn{
+					height: 44px;
+					width: 100%;
+					display: flex;
+					justify-content: flex-end;
+					align-items:flex-start
+				}
+				
 			}
 			.main__text{
 				h2{
@@ -294,9 +308,10 @@ body{
 					}
 					.time{
 						display: flex;
-						column-gap:9px;
-						div{
-							width: 35px;
+						// column-gap:9px;
+						align-items:center;
+						.times{
+							width: 35px;	
 							height: 27px;
 							display: flex;
 							align-items:center;
@@ -307,6 +322,18 @@ body{
 							font-size: 16px;
 							line-height: 20px;
 							color: #FF7E1B;
+						}
+						span{
+							display: flex;
+							flex-direction: column;
+							row-gap: 3px;
+							margin: 0 3px;
+							div{
+								width: 3px;
+								height: 3px;
+								background: #FF7E1B;
+								border-radius: 3px;
+							}
 						}
 					}
 				}
@@ -363,10 +390,22 @@ body{
 						}
 					}
 					.cart:hover{
-						opacity: 0.9;
+						opacity: 0.8;
 					}
 				}
 			}
 		}
 	}
-}
+	.overly{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: #000000;
+		opacity: 0.75;
+		display: flex;
+		justify-content: center;
+		display: none;
+	}
+}	

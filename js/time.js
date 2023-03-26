@@ -1,6 +1,6 @@
 'use strict'
 
-let deadline = '2023-03-15'
+let deadline2 = '2023-04-05'
 
 function getTimerData(dl) {
 	let timer = Date.parse(dl) - Date.parse(new Date()),
@@ -59,4 +59,4 @@ function addZero(num) {
 	}
 }
 
-showTimer(deadline, '#timer')
+showTimer(deadline2, '#timer')
