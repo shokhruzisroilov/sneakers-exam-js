@@ -56,7 +56,7 @@ plusCount.addEventListener('click', () => {
 	shopCart()
 })
 minusCount.addEventListener('click', () => {
-	if (counter < sneaker && counter >0) {
+	if (counter <= sneaker && counter >0) {
 		counter -= 1
 	}
 	shopCart()
