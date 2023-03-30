@@ -18,6 +18,14 @@
 						right: 50%;
 					}
 				}
+				.main__text{
+					.many__time{
+						.many{
+							display: flex;	
+							column-gap:50px;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -49,7 +57,12 @@
 					}
 					.many__time{
 						display: flex;
-						flex-direction: column;
+						flex-direction: column-reverse;
+						.many{
+							display: flex;
+							column-gap: 50px;
+							margin-top: 20px;
+						}
 					}
 					.cart__count{
 						display: flex;
@@ -235,7 +248,7 @@
 					display: none;
 				}
 				.shop__cart{
-					max-width: 250px;
+					max-width: 300px;
 					height: 256px;
 					margin-top: 36px;
 					position: absolute;
