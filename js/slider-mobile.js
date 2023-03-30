@@ -1,5 +1,5 @@
 // mobile Slider
-let slidesMobile = document.querySelectorAll('.slider-mobile .slide-mobe')
+let slidesMobile = document.querySelectorAll('.slider-mobile .slide')
 let prevBtn = document.querySelector('.slide-prev-mobile')
 let nextBtn = document.querySelector('.slide-next-mobile')
 let slideCountMobile = 0
