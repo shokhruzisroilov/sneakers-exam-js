@@ -12,24 +12,30 @@ let resCount = document.getElementById('res-count')
 shoppingIcon.addEventListener('click', () => {
 	shoppingCart.classList.toggle('toggle')
 })
-// window.addEventListener('click', (e) => {
-// 	if (e.target === shoppingCart){
-// 		shoppingCart.classList.remove('toggle')
-// 	}
-// })
+window.addEventListener('click', (e) => {
+	if (
+		!(
+			e.target.classList[0] === 'shop__cart' ||
+			e.target.classList[0] === 'carzin'
+		)
+	) {
+		shoppingCart.classList.remove('toggle')
+	}
+})
 
 let oneSale = 0.5
 let oneCost = 125
 let sneaker = 15
 let counter = 0
 
-function shopCart () {
+function shopCart() {
 	count.textContent = counter
 	cost.textContent = `$${counter * oneCost}.00`
 	total.textContent = `$${counter * oneCost * oneSale}.00`
 
 	cartBtn.addEventListener('click', (e) => {
 		resCount.textContent = counter
+		resCount.style.display = 'flex'
 		shoppingCart.innerHTML = `
 	<h3>Cart</h3>
 						<div class="hr__cart"></div>
@@ -50,16 +56,26 @@ function shopCart () {
 }
 
 plusCount.addEventListener('click', () => {
-	if(counter < sneaker){
+	if (counter < sneaker) {
 		counter += 1
 	}
 	shopCart()
 })
 minusCount.addEventListener('click', () => {
-	if (counter <= sneaker && counter >0) {
+	if (counter <= sneaker && counter > 0) {
 		counter -= 1
 	}
 	shopCart()
 })
 
-
+//delete user
+document.addEventListener('click', (e) => {
+	if (e.target.classList[0] === 'delete-icon'){
+		shoppingCart.innerHTML = `
+		<h3>Cart</h3>
+      <div class="hr__cart"></div>
+    <div class="h4"><h4>Your cart is empty.</h4></div>
+		`
+		resCount.style.display = 'none'
+	}
+})

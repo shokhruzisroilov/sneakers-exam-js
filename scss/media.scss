@@ -3,6 +3,9 @@
 		header{
 			padding-left: 20px;
 			padding-right: 20px;
+			.shop__cart{
+				left: 65%;
+			}
 		}
 		main{
 			.main__contend{
@@ -25,6 +28,9 @@
 		header{
 			padding-left: 20px;
 			padding-right: 20px;
+			.shop__cart{
+				left: 50%;
+			}
 		}
 		main{
 			.main__contend{
@@ -106,6 +112,9 @@
 					right:8px;
 					z-index: 99999;
 				}
+				.ham-burger{
+					display: block;
+				}
 		}
 		main{
 			.main__contend{
@@ -119,48 +128,12 @@
 					.big__img{
 						display: none;
 					}
-					.slider__modal{
+					.mobile{
 						display: flex;
-						justify-content: center;
-						position: absolute;
-						top: 0;
-						.close-btn{
-							display: none;
-						}
-						.slider{
-							width: 550px;
-							height: 300px;
-							.slide-prev{
-								width: 40px;
-								height: 40px;
-								margin-right:-40px;
-							}
-							.slide-next{
-								width: 40px;
-								height: 40px;
-								margin-left: -40px;
-							}
-							.slider__img{
-								.slider-inner{
-									position: relative;
-									.slide{
-										position: absolute;
-										img{
-											max-width: 550px;
-											height: 300px;
-										}
-									}
-								}
-							}
-						}
-						.modal-img{
-							display: none;
-						}
 					}
 				}
 				.main__text{
 					padding: 0 24px;
-					margin-top: 300px;
 					h2{
 						margin-top: 24px;
 						font-size: 12px;
@@ -262,11 +235,50 @@
 					display: none;
 				}
 				.shop__cart{
+					max-width: 250px;
+					height: 256px;
 					margin-top: 36px;
 					position: absolute;
 					left:8px;
 					right:8px;
-					z-index: 9999;
+					z-index: 999999;
+					padding: 5px;
+				}
+				.burger-menu{
+					display: none;	
+					width: 70%;
+					height: 100vh;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom:0;
+					background-color:#fff;
+					z-index: 99999;
+					padding: 25px;
+					.burger-close{
+						color:#69707D;
+						font-size: 20px;
+						font-weight: 900;
+					}
+					nav{
+						margin-top: 50px;
+						ul{
+							display: flex;
+							flex-direction: column;
+							row-gap: 20px;
+							list-style: none;
+							a{
+								text-decoration: none;
+								font-weight: 700;
+								font-size: 18px;
+								line-height: 26px;
+								color: #1D2026;
+							}
+						}
+					}
+				}
+				.ham-burger{
+					display: block;
 				}
 		}
 		main{
@@ -281,50 +293,12 @@
 					.big__img{
 						display: none;
 					}
-					.slider__modal{
+					.mobile{
 						display: flex;
-						justify-content: center;
-						position: absolute;
-						top: 0;
-						.close-btn{
-							display: none;
-						}
-						.slider{
-							width: 375px;
-							height: 300px;
-							.slide-prev{
-								width: 40px;
-								height: 40px;
-								margin-right:-40px;
-							}
-							.slide-next{
-								width: 40px;
-								height: 40px;
-								margin-left: -40px;
-							}
-							.slider__img{
-								width: 375px;
-								height: 300px;
-								.slider-inner{
-									.slide{
-										width: 375px;
-										height: 300px;
-										img{
-											width: 375px;
-											height: 300px;
-										}
-									}
-								}
-							}
-						}
-						.modal-img{
-							display: none;
-						}
 					}
 				}
 				.main__text{
 					padding: 0 24px;
-					margin-top: 300px;
 					h2{
 						margin-top: 24px;
 						font-size: 12px;
@@ -351,6 +325,8 @@
 						flex-direction: column-reverse;
 						margin-top: 24px;
 						.many{
+							display: flex;
+							column-gap:30px;
 							span{
 								display: flex;
 								column-gap:16px;
@@ -384,7 +360,6 @@
 						}
 						.cart{
 							margin-top: 16px;
-							// margin-bottom: 37px;
 						}
 					}
 				}

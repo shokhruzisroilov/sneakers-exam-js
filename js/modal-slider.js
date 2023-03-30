@@ -11,10 +11,12 @@ let slidesParent = document.querySelectorAll('#slide-parent')
 function removeHidden(){
 	sliderModal.classList.remove('hidden')
 	overly.classList.remove('hidden')
+
 }
 function addHidden(){
 	sliderModal.classList.add('hidden')
 	overly.classList.add('hidden')
+	burgerMenu.classList.toggle('ham-burger')	
 }
 
 tabContent.forEach((item) => {
@@ -28,7 +30,7 @@ let slideCount = 0
 
 slidePrev.addEventListener('click', () => {
 	if(slideCount <= 0){
-		slideCount = slides.length - 1
+		slideCount = slides.length -1
 	}else{
 		slideCount--
 	}

@@ -1,5 +1,3 @@
-'use strict'
-
 let deadline2 = '2023-04-05'
 
 function getTimerData(dl) {
